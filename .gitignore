@@ -1,0 +1,25 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Temporary
+.DS_Store
+*.log
+._*
+
+# Artifacts
+builds
+
+# To-do Lists
+todo
+
+# Fmod
+.cache
+.unsaved
+.user
+
+tools/old
+# tools/input
+tools/output
+
+*.psd
