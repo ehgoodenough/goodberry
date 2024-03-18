@@ -12,7 +12,7 @@ body {
 
 header {
     height: 30em;
-    background-color: #f0ead6;
+    background-color: #f0EAD6;
 
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ header {
 
 .BlurbSection {
     padding: 2em;
-    color: #f0ead6;
+    color: #f0EAD6;
     background-color: #0B6E4F;
 
     div {
@@ -45,36 +45,36 @@ header {
 }
 
 .HeaderSection {
-    font-size: 1.25em;
     text-align: center;
-    color: #f0ead6;
+    color: #f0EAD6;
     background-color: #0B6E4F;
 }
 
 .GamesSection {
     padding: 2em;
-    color: #f0ead6;
+    color: #f0EAD6;
     background-color: #0B6E4F;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
 
-    @media(max-width: 1000px) {
+    @media(max-width: 1200px) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @media(max-width: 500px) {
+    @media(max-width: 600px) {
         grid-template-columns: 1fr;
         grid-gap: 2em;
     }
 
     .Game {
         overflow: hidden;
-        border-radius: 1px;
+        border-radius: 2px;
 
         img {
             width: 100%;
+            display: block;
         }
 
         transition-property: filter;
@@ -87,14 +87,91 @@ header {
     }
 }
 
+.TeamSection {
+    padding: 4em 2em;
+    color: #f0EAD6;
+    background-color: #D44D5C;
+
+    display: flex;
+
+    @media(max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .Photo {
+        flex: 1;
+        background-color: #442B48;
+
+        img {
+            width: 100%;
+            transform: rotate(-4deg);
+        }
+    }
+
+    .Vibes {
+        flex: 1;
+
+        padding-left: 2em;
+        @media(max-width: 600px) {
+            padding-left: 0em;
+            padding-top: 2em;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        span {
+            max-width: 480px;
+            font-size: 1.2em;
+            text-align: justify;
+
+            @media(max-width: 1200px) {
+                font-size: 1em;
+                max-width: 320px;
+            }
+        }
+    }
+}
+
 .JobsSection {
     padding: 2em;
-    background-color: brown;
+
+    color: #f0EAD6;
+    background-color: #D44D5C;
+
+    h2 {
+        text-align: center;
+    }
+    .Job {
+        margin: auto;
+        margin-top: 1em;
+        max-width: 640px;
+        padding: 0.25em 0.5em;
+        display: block;
+
+        color: inherit;
+        text-decoration: none;
+
+        background-color: rgb(68, 43, 72, 0.5);
+
+        &:hover {
+            cursor: pointer;
+            background-color: #442B48;
+            border-radius: 2px;
+        }
+        .Name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
 }
 
 footer {
     height: 3em;
-    background-color: #f0ead6;
+    color: #f0EAD6;
+    background-color: #442B48;
 
     display: flex;
     align-items: center;
