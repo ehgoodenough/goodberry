@@ -28,8 +28,32 @@ header {
     }
 }
 
+.BlurbSection {
+    padding: 2em;
+    color: #f0ead6;
+    background-color: #0B6E4F;
+
+    div {
+        width: 100%;
+        max-width: 480px;
+        margin: auto;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.HeaderSection {
+    font-size: 1.25em;
+    text-align: center;
+    color: #f0ead6;
+    background-color: #0B6E4F;
+}
+
 .GamesSection {
     padding: 2em;
+    color: #f0ead6;
     background-color: #0B6E4F;
 
     display: grid;
