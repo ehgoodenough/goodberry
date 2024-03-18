@@ -60,6 +60,15 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
 
+    @media(max-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 500px) {
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+
     .Game {
         overflow: hidden;
         border-radius: 1px;
