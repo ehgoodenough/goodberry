@@ -8,6 +8,20 @@
 body {
     margin: auto;
     max-width: 1600px;
+    font-family: base;
+    line-height: 1.2em;
+}
+
+h1 {
+    font-family: header;
+    text-align: center;
+    font-size: 1em;
+}
+h2 {
+    font-weight: normal;
+    font-family: header;
+    text-align: center;
+    font-size: 2em;
 }
 
 header {
@@ -25,6 +39,7 @@ header {
 
     h1 {
         font-size: 4em;
+        font-family: header;
     }
 }
 
@@ -52,6 +67,7 @@ header {
 .HeaderSection {
     margin: 2em 0em;
     text-align: center;
+    font-family: header;
 }
 
 .GamesSection {
@@ -135,6 +151,7 @@ header {
             max-width: 480px;
             font-size: 1.2em;
             text-align: justify;
+            margin-top: 1em;
 
             @media(max-width: 1200px) {
                 font-size: 1em;
@@ -147,9 +164,6 @@ header {
 .JobsSection {
     margin: 2em;
 
-    h2 {
-        text-align: center;
-    }
     .Job {
         margin: auto;
         margin-top: 1em;
@@ -182,4 +196,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@font-face {
+    font-family: "base";
+    src: url("./fonts/sumana/Sumana-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "header";
+    src: url("./fonts/draconis/Draconis.otf") format("opentype");
 }
