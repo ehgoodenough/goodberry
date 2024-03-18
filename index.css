@@ -94,12 +94,13 @@ header {
             display: block;
         }
 
-        transition-property: filter;
+        transition-property: opacity;
         transition-duration: 1s;
 
+        opacity: 0.8;
         &:hover {
             transition-duration: 0.25s;
-            filter: brightness(2);
+            opacity: 1;
         }
     }
 }
