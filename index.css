@@ -28,11 +28,16 @@ header {
     }
 }
 
-.BlurbSection {
-    padding: 2em;
+.GreenSection {
+    overflow: hidden;
+    padding: 0em 2em;
+
     color: #f0EAD6;
     background-color: #0B6E4F;
+}
 
+.BlurbSection {
+    margin: 2em 0em;
     div {
         width: 100%;
         max-width: 480px;
@@ -45,16 +50,12 @@ header {
 }
 
 .HeaderSection {
+    margin: 2em 0em;
     text-align: center;
-    color: #f0EAD6;
-    background-color: #0B6E4F;
 }
 
 .GamesSection {
-    padding: 2em;
-    color: #f0EAD6;
-    background-color: #0B6E4F;
-
+    margin: 2em 0em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
@@ -87,10 +88,18 @@ header {
     }
 }
 
-.TeamSection {
-    padding: 4em 2em;
+.RedSection {
+    overflow: hidden;
+    padding: 0em 2em;
+
     color: #f0EAD6;
     background-color: #D44D5C;
+}
+
+.TeamSection {
+    margin: auto;
+    max-width: 1200px;
+    margin: 4em auto;
 
     display: flex;
 
@@ -136,10 +145,7 @@ header {
 }
 
 .JobsSection {
-    padding: 2em;
-
-    color: #f0EAD6;
-    background-color: #D44D5C;
+    margin: 2em;
 
     h2 {
         text-align: center;
