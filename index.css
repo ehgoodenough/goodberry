@@ -15,13 +15,13 @@ body {
 h1 {
     font-family: header;
     text-align: center;
-    font-size: 1em;
+    font-size: 5em;
 }
 h2 {
     font-weight: normal;
     font-family: header;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 header {
@@ -38,7 +38,6 @@ header {
     background-image: url("./images/bush.png");
 
     h1 {
-        font-size: 4em;
         font-family: header;
     }
 }
@@ -52,7 +51,7 @@ header {
 }
 
 .BlurbSection {
-    margin: 2em 0em;
+    margin: 4em 0em;
     div {
         width: 100%;
         max-width: 480px;
@@ -72,7 +71,7 @@ header {
 
 .GamesSection {
     margin: 2em 0em;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
 
@@ -83,24 +82,90 @@ header {
     @media(max-width: 600px) {
         grid-template-columns: 1fr;
         grid-gap: 2em;
-    }
+    } */
 
     .Game {
+        display: flex;
         overflow: hidden;
-        border-radius: 2px;
 
-        img {
-            width: 100%;
-            display: block;
+        text-decoration: none;
+        font: inherit;
+        color: inherit;
+
+        margin-bottom: 2em;
+        max-width: 1200px;
+
+        @media(max-width: 900px) {
+            flex-direction: column;
         }
 
-        transition-property: opacity;
-        transition-duration: 1s;
+        .Image {
+            height: 20em;
+            margin-right: 2em;
+            position: relative;
+            @media(max-width: 900px) {
+                margin-right: 0em;
+                margin-bottom: 2em;
+            }
 
-        opacity: 0.8;
+            .Poster {
+                height: 20em;
+                /* width: 100%; */
+                display: block;
+                border-radius: 2px;
+            }
+
+            .Animation {
+                top: 0em;
+                left: 0em;
+                bottom: 0em;
+                right: 0em;
+                position: absolute;
+
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                background-color: orange;
+                opacity: 0;
+            }
+        }
+        .Description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-weight: bold;
+                font-family: header;
+                font-size: 2em;
+            }
+
+            p {
+                margin: 1em 0em;
+            }
+
+            button {
+                border: none;
+                font: inherit;
+                background: none;
+                text-align: left;
+                    
+                color: #D44D5C;
+                text-decoration: underline;
+
+                &:hover {
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+
         &:hover {
-            transition-duration: 0.25s;
-            opacity: 1;
+            .Animation {
+                opacity: 1;
+            }
         }
     }
 }
