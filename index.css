@@ -7,7 +7,7 @@
 
 body {
     margin: auto;
-    max-width: 1600px;
+    max-width: 1200px;
     font-family: base;
     line-height: 1.2em;
 }
@@ -16,29 +16,50 @@ h1 {
     font-family: header;
     text-align: center;
     font-size: 5em;
+    line-height: 1em;
 }
 h2 {
-    font-weight: normal;
     font-family: header;
+    font-weight: lighter;
     text-align: center;
     font-size: 3em;
 }
 
 header {
-    height: 30em;
+    /* height: 30em; */
     background-color: #f0EAD6;
+    padding: 5em 0em;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-size: 100% auto;
+    @media(max-width: 900px) {
+        flex-direction: column-reverse;
+
+        h1 {
+            width: min-intrinsic;
+            width: -webkit-min-content;
+            width: -moz-min-content;
+            width: min-content;
+            display: table-caption;
+            display: -ms-grid;
+            -ms-grid-columns: min-content;
+        }
+    }
+
+    /* background-size: 100% auto;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-image: url("./images/bush.png");
+    background-image: url("./images/bush.png"); */
+
+    img {
+        height: 6em;
+    }
 
     h1 {
         font-family: header;
+        display: inline;
     }
 }
 
@@ -71,18 +92,12 @@ header {
 
 .GamesSection {
     margin: 2em 0em;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
 
-    @media(max-width: 1200px) {
-        grid-template-columns: 1fr 1fr;
+    @media(max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    @media(max-width: 600px) {
-        grid-template-columns: 1fr;
-        grid-gap: 2em;
-    } */
 
     .Game {
         display: flex;
@@ -96,38 +111,17 @@ header {
         max-width: 1200px;
 
         @media(max-width: 900px) {
-            flex-direction: column;
+            display: block;
         }
 
-        .Image {
+        .Poster {
             height: 20em;
+            width: auto;
             margin-right: 2em;
             position: relative;
             @media(max-width: 900px) {
                 margin-right: 0em;
                 margin-bottom: 2em;
-            }
-
-            .Poster {
-                height: 20em;
-                /* width: 100%; */
-                display: block;
-                border-radius: 2px;
-            }
-
-            .Animation {
-                top: 0em;
-                left: 0em;
-                bottom: 0em;
-                right: 0em;
-                position: absolute;
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-
-                background-color: orange;
-                opacity: 0;
             }
         }
         .Description {
@@ -135,6 +129,10 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media(max-width: 900px) {
+                max-width: 400px;
+            }
 
             h3 {
                 font-weight: bold;
