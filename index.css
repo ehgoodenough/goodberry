@@ -33,6 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     @media(max-width: 900px) {
         flex-direction: column-reverse;
@@ -94,9 +95,9 @@ header {
     margin: 2em 0em;
 
     @media(max-width: 900px) {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; */
     }
 
     .Game {
@@ -115,13 +116,17 @@ header {
         }
 
         .Poster {
+            display: block;
             height: 20em;
             width: auto;
             margin-right: 2em;
             position: relative;
             @media(max-width: 900px) {
-                margin-right: 0em;
+                margin: auto;
                 margin-bottom: 2em;
+                height: auto !important;
+                width: 100% !important;
+                max-width: 400px;
             }
         }
         .Description {
@@ -132,6 +137,7 @@ header {
 
             @media(max-width: 900px) {
                 max-width: 400px;
+                margin: auto;
             }
 
             h3 {
