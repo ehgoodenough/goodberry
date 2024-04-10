@@ -18,6 +18,7 @@ h1 {
     font-size: 5em;
     line-height: 1em;
 }
+
 h2 {
     font-family: header;
     font-weight: lighter;
@@ -26,9 +27,10 @@ h2 {
 }
 
 header {
-    /* height: 30em; */
     background-color: #f0EAD6;
-    padding: 5em 0em;
+    /* padding: 5em 0em; */
+    padding-top: 10em;
+    padding-bottom: 5em;
 
     display: flex;
     align-items: center;
@@ -37,16 +39,8 @@ header {
 
     @media(max-width: 900px) {
         flex-direction: column-reverse;
-
-        h1 {
-            width: min-intrinsic;
-            width: -webkit-min-content;
-            width: -moz-min-content;
-            width: min-content;
-            display: table-caption;
-            display: -ms-grid;
-            -ms-grid-columns: min-content;
-        }
+        padding-top: 5em;
+        padding-bottom: 0em;
     }
 
     /* background-size: 100% auto;
@@ -61,7 +55,25 @@ header {
     h1 {
         font-family: header;
         display: inline;
+        @media(max-width: 900px) {
+            width: min-intrinsic;
+            width: -webkit-min-content;
+            width: -moz-min-content;
+            width: min-content;
+            display: table-caption;
+            display: -ms-grid;
+            -ms-grid-columns: min-content;
+        }
     }
+}
+
+.GreenBush {
+    width: 100%;
+    height: 200px;
+    background-color: #f0EAD6;
+    background-size: auto 100%;
+    background-position: center top;
+    background-image: url("./images/greenbush.png");
 }
 
 .GreenSection {
@@ -94,12 +106,6 @@ header {
 .GamesSection {
     margin: 2em 0em;
 
-    @media(max-width: 900px) {
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
-    }
-
     .Game {
         display: flex;
         overflow: hidden;
@@ -126,7 +132,7 @@ header {
                 margin-bottom: 2em;
                 height: auto !important;
                 width: 100% !important;
-                max-width: 400px;
+                max-width: 600px;
             }
         }
         .Description {
@@ -136,7 +142,7 @@ header {
             justify-content: center;
 
             @media(max-width: 900px) {
-                max-width: 400px;
+                max-width: 600px;
                 margin: auto;
             }
 
@@ -172,6 +178,15 @@ header {
             }
         }
     }
+}
+
+.RedBush {
+    width: 100%;
+    height: 200px;
+    background-color: #0B6E4F;
+    background-size: auto 100%;
+    background-position: center top;
+    background-image: url("./images/redbush.png");
 }
 
 .RedSection {
@@ -256,6 +271,15 @@ header {
             font-weight: bold;
         }
     }
+}
+
+.BlackBush {
+    width: 100%;
+    height: 200px;
+    background-color: #c1666b;
+    background-size: auto 100%;
+    background-position: center top;
+    background-image: url("./images/blackbush.png");
 }
 
 footer {
