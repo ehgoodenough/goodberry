@@ -271,6 +271,11 @@ header {
             font-weight: bold;
         }
     }
+
+    .EmptyPrompt {
+        margin-top: 2em;
+        text-align: center;
+    }
 }
 
 .BlackBush {
