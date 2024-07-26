@@ -76,12 +76,38 @@ header {
     background-image: url("./images/greenbush.png");
 }
 
-.GreenSection {
+.GreenArea {
     overflow: hidden;
     padding: 0em 2em;
 
     color: #f0EAD6;
     background-color: #0B6E4F;
+}
+
+.RedBush {
+    width: 100%;
+    height: 200px;
+    background-color: #0B6E4F;
+    background-size: auto 100%;
+    background-position: center top;
+    background-image: url("./images/redbush.png");
+}
+
+.RedArea {
+    overflow: hidden;
+    padding: 0em 2em;
+
+    color: #f0EAD6;
+    background-color: #c1666b;
+}
+
+.BlackBush {
+    width: 100%;
+    height: 200px;
+    background-color: #c1666b;
+    background-size: auto 100%;
+    background-position: center top;
+    background-image: url("./images/blackbush.png");
 }
 
 .BlurbSection {
@@ -97,6 +123,69 @@ header {
     }
 }
 
+.EmailSection {
+    margin-bottom: 4em;
+
+    h2 {
+        line-height: 1em;
+        text-align: center;
+    }
+
+    .Box {
+        margin: auto;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 1em;
+
+        label {
+            display: block;
+            white-space: nowrap;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+
+            .asterisk {
+                color: #c1666b;
+                font-weight: bold;
+            }
+        }
+
+        .Inputs {
+            display: flex;
+
+            input {
+                display: flex;
+                justify-content: center;
+                font: inherit;
+                font-size: 1.2em;
+                width: 100%;
+                border: none;
+
+                &[type=email] {
+                    padding-left: 1em;
+                    background-color: #f0EAD6;
+                    border-top-left-radius: 1em;
+                    border-bottom-left-radius: 1em;
+                }
+
+                &[type=submit] {
+                    width: 8em;
+                    font-size: 1em;
+
+                    cursor: pointer;
+                    color: #f0EAD6;
+                    background-color: #c1666b;
+                    border-top-right-radius: 1em;
+                    border-bottom-right-radius: 1em;
+
+                    &:hover {
+                        background-color: #ae464c;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .HeaderSection {
     margin: 2em 0em;
     text-align: center;
@@ -104,7 +193,7 @@ header {
 }
 
 .GamesSection {
-    margin: 2em 0em;
+    margin: 8em 0em;
 
     .Game {
         display: flex;
@@ -178,23 +267,6 @@ header {
             }
         }
     }
-}
-
-.RedBush {
-    width: 100%;
-    height: 200px;
-    background-color: #0B6E4F;
-    background-size: auto 100%;
-    background-position: center top;
-    background-image: url("./images/redbush.png");
-}
-
-.RedSection {
-    overflow: hidden;
-    padding: 0em 2em;
-
-    color: #f0EAD6;
-    background-color: #c1666b;
 }
 
 .TeamSection {
@@ -276,15 +348,6 @@ header {
         margin-top: 2em;
         text-align: center;
     }
-}
-
-.BlackBush {
-    width: 100%;
-    height: 200px;
-    background-color: #c1666b;
-    background-size: auto 100%;
-    background-position: center top;
-    background-image: url("./images/blackbush.png");
 }
 
 footer {
