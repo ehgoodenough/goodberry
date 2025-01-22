@@ -48,8 +48,12 @@ header {
     background-repeat: no-repeat;
     background-image: url("./images/bush.png"); */
 
-    img {
+    img.Logo {
         height: 6em;
+    }
+
+    img.Title {
+        height: 40em;
     }
 
     h1 {
@@ -108,6 +112,14 @@ header {
     background-size: auto 100%;
     background-position: center top;
     background-image: url("./images/blackbush.png");
+}
+
+.BlackArea {
+    overflow: hidden;
+    padding: 0em 2em;
+
+    color: #f0EAD6;
+    background-color: #442b48;
 }
 
 .BlurbSection {
@@ -375,18 +387,6 @@ footer {
 
 @font-face {
     font-family: "header";
-    font-weight: lighter;
-    src: url("./fonts/rowdies/Rowdies-Light.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "header";
     font-weight: normal;
-    src: url("./fonts/rowdies/Rowdies-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "header";
-    font-weight: bold;
-    src: url("./fonts/rowdies/Rowdies-Bold.ttf") format("truetype");
+    src: url("./fonts/sniglet/Sniglet-Regular.ttf") format("truetype");
 }
