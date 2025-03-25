@@ -255,10 +255,11 @@ header {
                 font-weight: bold;
                 font-family: header;
                 font-size: 2em;
+                margin-bottom: 1.5rem;
             }
 
             p {
-                margin: 1em 0em;
+                margin-bottom: 1.5rem;
             }
 
             button {
@@ -266,7 +267,7 @@ header {
                 font: inherit;
                 background: none;
                 text-align: left;
-                margin: 1em 0em;
+                margin-bottom: 1.5rem;
 
                 color: inherit;
                 font-size: 1.5em;
