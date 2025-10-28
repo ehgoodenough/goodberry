@@ -287,11 +287,21 @@ header {
 
             .Carousel {
                 display: flex;
-                margin-top: 3px;
+                margin-top: 2px;
 
                 .CarouselItem {
-                    height: 65px;
-                    min-width: 1px;
+                    /* height: 65px;
+                    min-width: 1px; */
+
+                    flex: 1;
+
+                    .Thumbnail {
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+
+                        padding-bottom: 56.25%;
+                    }
 
                     cursor: pointer;
                     -webkit-user-drag: none;
@@ -304,27 +314,30 @@ header {
                         margin-right: 4px;
                     } */
 
-                    /* &:first-child {
-                        margin-left: -2px;
-                    }
-                    &:last-child {
-                        margin-right: -2px;
-                    } */
-
-                    /* border-width: 2px;
+                    border-width: 2px;
                     border-style: solid;
-                    border-color: transparent; */
+                    border-color: transparent;
+                    box-sizing: content-box;
                 }
             }
         }
 
-        @media(max-width: 900px) {
+        @media(max-width: 1000px) {
             flex-direction: column-reverse;
             align-items: center;
 
             .Summary {
                 width: 100%;
-                margin-bottom: 1em;
+
+                .CallToAction {
+                    margin: auto;
+                }
+
+                margin: auto;
+                margin-bottom: 2em;
+                height: auto !important;
+                width: 100% !important;
+                max-width: 600px;
             }
 
             .Highlights {
