@@ -1,3 +1,16 @@
+:root {
+    --green: #0B6E4F;
+    /* --green: #306e52; this is from the brand guide */
+    --dark-green: #086246;
+    --purple: #442B48;
+    --white: #f0EAD6;
+    /* --white: #fcf0f2 this is from the brand guide */
+    /* --red: #c1666b;
+    --dark-red: #ae464c; */
+    --red: #c75c63;
+    --dark-red: #b03b3b;
+}
+
 * {
     margin: 0em;
     padding: 0em;
@@ -9,7 +22,7 @@ body {
     margin: auto;
     max-width: 1200px;
     font-family: base;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 
 h1 {
@@ -72,14 +85,14 @@ header {
 }
 
 .WhiteArea {
-    color: #442B48;
-    background-color: #f0EAD6;
+    color: var(--purple);
+    background-color: var(--white);
 }
 
 .GreenBush {
     width: 100%;
     height: 200px;
-    background-color: #f0EAD6;
+    background-color: var(--white);
     background-size: auto 100%;
     background-position: center top;
     background-image: url("./images/greenbush.png");
@@ -87,16 +100,16 @@ header {
 
 .GreenArea {
     overflow: hidden;
-    padding: 0em 2em;
+    /* padding: 0em 2em; */
 
-    color: #f0EAD6;
-    background-color: #0B6E4F;
+    color: var(--white);
+    background-color: var(--green);
 }
 
 .RedBush {
     width: 100%;
     height: 200px;
-    background-color: #0B6E4F;
+    background-color: var(--green);
     background-size: auto 100%;
     background-position: center top;
     background-image: url("./images/redbush.png");
@@ -106,14 +119,15 @@ header {
     overflow: hidden;
     padding: 0em 2em;
 
-    color: #f0EAD6;
-    background-color: #c1666b;
+    color: var(--white);
+    background-color: var(--red);
 }
 
 .BlackBush {
     width: 100%;
     height: 200px;
-    background-color: #c1666b;
+    /* background-color: var(--red); */
+    background-color: var(--green);
     background-size: auto 100%;
     background-position: center top;
     background-image: url("./images/blackbush.png");
@@ -123,8 +137,8 @@ header {
     overflow: hidden;
     padding: 0em 2em;
 
-    color: #f0EAD6;
-    background-color: #442b48;
+    color: var(--white);
+    background-color: var(--purple);
 }
 
 .BlurbSection {
@@ -161,7 +175,7 @@ header {
             margin-bottom: 0.5em;
 
             .asterisk {
-                color: #c1666b;
+                color: var(--red);
                 font-weight: bold;
             }
         }
@@ -180,7 +194,7 @@ header {
 
                 &[type=email] {
                     padding-left: 1.5em;
-                    background-color: #f0EAD6;
+                    background-color: var(--white);
                     border-top-left-radius: 1em;
                     border-bottom-left-radius: 1em;
                 }
@@ -190,13 +204,13 @@ header {
                     font-size: 1em;
 
                     cursor: pointer;
-                    color: #f0EAD6;
-                    background-color: #c1666b;
+                    color: var(--white);
+                    background-color: var(--red);
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
 
                     &:hover {
-                        background-color: #ae464c;
+                        background-color: var(--dark-red);
                     }
                 }
             }
@@ -221,7 +235,9 @@ header {
         color: inherit;
         text-decoration: none;
 
-        margin-bottom: 2em;
+        padding: 2em 2em;
+        background-color: var(--dark-green);
+        /* margin-bottom: 2em; */
 
         .Summary {
             width: 375px;
@@ -243,7 +259,10 @@ header {
 
         .Highlights {
             flex: 1;
-            overflow-x: hidden;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                display: none; /* Hides the scrollbar */
+            }
 
             .Focus {
                 width: 100%;
@@ -282,13 +301,34 @@ header {
                     user-drag: none;
 
                     /* &:not(:last-child) {
-                        margin-right: 2px;
+                        margin-right: 4px;
                     } */
 
-                    border-width: 2px;
+                    /* &:first-child {
+                        margin-left: -2px;
+                    }
+                    &:last-child {
+                        margin-right: -2px;
+                    } */
+
+                    /* border-width: 2px;
                     border-style: solid;
-                    border-color: transparent;
+                    border-color: transparent; */
                 }
+            }
+        }
+
+        @media(max-width: 900px) {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .Summary {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+
+            .Highlights {
+                width: 100%;
             }
         }
     }
@@ -301,11 +341,16 @@ header {
         font: inherit;
         color: inherit;
 
-        margin-bottom: 2em;
+        padding: 2em;
+        /* margin-bottom: 2em; */
         max-width: 1200px;
 
         @media(max-width: 900px) {
             display: block;
+        }
+
+        &:nth-of-type(2n+1) {
+            background-color: var(--dark-green);
         }
 
         .Poster {
@@ -369,7 +414,7 @@ header {
     .Photo {
         flex: 1;
         border-radius: 0.5em;
-        background-color: #442B48;
+        background-color: var(--purple);
 
         img {
             width: 100%;
@@ -428,7 +473,7 @@ header {
 
         &:hover {
             cursor: pointer;
-            background-color: #442B48;
+            background-color: var(--purple);
             border-radius: 2px;
         }
         .Name {
@@ -455,19 +500,26 @@ footer {
 .CallToAction {
     border: none;
     font: inherit;
-    background: none;
-    text-align: left;
-    margin-bottom: 1.5rem;
-
     color: inherit;
+    background: none;
+
+    width: 7em;
+    padding: 0.5em;
+    text-align: center;
+    /* margin-bottom: 1.5rem; */
+
     font-size: 1.5em;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: header;
 
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--red);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+
     &:hover {
-        cursor: pointer;
-        color: #F0C808;
+        background-color: var(--dark-red);
     }
 }
 
