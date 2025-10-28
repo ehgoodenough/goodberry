@@ -249,101 +249,48 @@ header {
                 width: 100%;
                 padding-bottom: 56.25%;
                 position: relative;
+                background-color: black;
 
-                iframe {
+                .FocusItem {
+                    opacity: 0;
+                    transition-duration: 0.1s;
+                    transition-property: opacity;
+
                     top: 0em;
                     left: 0em;
                     right: 0em;
                     bottom: 0em;
+                    width: 100%;
+                    height: 100%;
                     position: absolute;
                 }
             }
 
             .Carousel {
                 display: flex;
-                flex-basis: fit-content;
                 margin-top: 3px;
 
-                overflow-x: scroll;
-                /* &::-webkit-scrollbar {
-                    display: none;
-                } */
-
                 .CarouselItem {
-                    &:not(:last-child) {
-                        margin-right: 2px;
-                    }
+                    height: 65px;
+                    min-width: 1px;
 
-                    .Imaged {
-                        width: 116px;
-                        background-color: blue;
-                        padding-bottom: 56.25%;
-                    }
+                    cursor: pointer;
+                    -webkit-user-drag: none;
+                    -khtml-user-drag: none;
+                    -moz-user-drag: none;
+                    -o-user-drag: none;
+                    user-drag: none;
+
+                    /* &:not(:last-child) {
+                        margin-right: 2px;
+                    } */
+
+                    border-width: 2px;
+                    border-style: solid;
+                    border-color: transparent;
                 }
             }
         }
-        /* max-width: 1200px;
-        @media(max-width: 900px) {
-            display: block;
-        } */
-
-        /* .Poster {
-            width: auto;
-            height: 20em;
-            display: block;
-            margin-right: 2em;
-            position: relative;
-            border-radius: 0.5em;
-
-            @media(max-width: 900px) {
-                margin: auto;
-                margin-bottom: 2em;
-                height: auto !important;
-                width: 100% !important;
-                max-width: 600px;
-            }
-        } */
-        /* .Description {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            @media(max-width: 900px) {
-                max-width: 600px;
-                margin: auto;
-            }
-
-            h3 {
-                font-weight: bold;
-                font-family: header;
-                font-size: 2em;
-                margin-bottom: 1.5rem;
-            }
-
-            p {
-                margin-bottom: 1.5rem;
-            }
-
-            button {
-                border: none;
-                font: inherit;
-                background: none;
-                text-align: left;
-                margin-bottom: 1.5rem;
-
-                color: inherit;
-                font-size: 1.5em;
-                font-weight: bold;
-                text-decoration: underline;
-                font-family: header;
-
-                &:hover {
-                    cursor: pointer;
-                    color: #F0C808;
-                }
-            }
-        } */
     }
 
     .Game {
@@ -397,25 +344,6 @@ header {
 
             p {
                 margin-bottom: 1.5rem;
-            }
-
-            button {
-                border: none;
-                font: inherit;
-                background: none;
-                text-align: left;
-                margin-bottom: 1.5rem;
-
-                color: inherit;
-                font-size: 1.5em;
-                font-weight: bold;
-                text-decoration: underline;
-                font-family: header;
-
-                &:hover {
-                    cursor: pointer;
-                    color: #F0C808;
-                }
             }
         }
 
@@ -524,6 +452,24 @@ footer {
     justify-content: center;
 }
 
+.CallToAction {
+    border: none;
+    font: inherit;
+    background: none;
+    text-align: left;
+    margin-bottom: 1.5rem;
+
+    color: inherit;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: header;
+
+    &:hover {
+        cursor: pointer;
+        color: #F0C808;
+    }
+}
 
 @font-face {
     font-family: "base";
